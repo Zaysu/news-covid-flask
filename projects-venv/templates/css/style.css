@@ -1,0 +1,63 @@
+#news{
+    float: center;
+}
+
+.card{
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0 rgba(50, 50);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    height: 150px;
+    transition: all 0.3s ease-out;
+    background-color: #0a384e;
+    float: left;
+    margin-left: 5%;
+  }
+  
+  .card:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+  
+  .card p {
+    color: #a3a5ae;
+    font-size: 16px;
+  }
+
+  .card p {
+    color: #a3a5ae;
+    font-size: 16px;
+  }
+  
+  .green{
+    border-left: 3px solid #3bb54a;
+  }
+  
+  .blue{
+    border-left: 3px solid #327C9F;
+  }
+  
+  .red{
+    border-left: 3px solid #b3404a;
+  }
+
+  input[type=text] {
+		width: 40%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+	  }
+    select {
+      width: 30%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      }
+
+      button[type=submit] {
+        width: 40%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        }
