@@ -1,81 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Projeto Covid-19 Journal </title>
-</head>
-<body>
-  
-        <!-- Image and text -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Covid-19 Journal</title>
+  </head>
+  <body>
+    <!-- Image and text -->
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">
-        <img src="img/menu/casa.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            Home
-        </a>
-        <a class="navbar-brand" href="#">
-            <img src="img/menu/news.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            Novas Noticias
-        </a>
-        <a class="navbar-brand" href="#">
-            <img src="img/menu/login.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            NewLastter
-        </a>
-    </nav><br>
+      <a class="navbar-brand" href="{{ url_for('home')}}">
+        <img
+          src="img/menu/casa.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        Home
+      </a>
+      <a class="navbar-brand" href="{{ url_for('news')}}">
+        <img
+          src="img/menu/news.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        Novas Noticias
+      </a>
+      <a class="navbar-brand" href="{{ url_for('nl')}}">
+        <img
+          src="img/menu/login.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        NewLastter
+      </a>
+    </nav>
+    <br />
 
-        <h1 class="display-4" >RECEBA NOSSAS NOTICIAS</h1>
-        <h1>______________________________</h1><br>
-        <label  for="nome"><h5 class="display-4">Nome:</h5></label><br>
-        <input type="text" id="nomeid" placeholder="Seu Nome" name="nome" /><br>
-        <label for="nome"><h5 class="display-4">Email:</h5></label><br>
-        <input type="text" id="emailid" placeholder="Email" name="email" /><br>
-    
-        <label for="prod"><h5 class="display-4">Produto</h5></label>
-        <select name="tipo-produto" id="tipoid">
-            <option value="1"><td>COVID-19</td></option>
-            <option value="2"><td>CIÊNCIA</td></option>
-            <option value="3"> <td>TECNOLOGIA</td></option>
-        </select> <br><br>
+    <h1 class="display-4">RECEBA NOSSAS NOTICIAS</h1>
+    <h1>______________________________</h1>
+    <br />
+    <label for="nome"><h5 class="display-4">Nome:</h5></label><br />
+    <input type="text" id="nomeid" placeholder="Seu Nome" name="nome" /><br />
+    <label for="nome"><h5 class="display-4">Email:</h5></label><br />
+    <input type="text" id="emailid" placeholder="Email" name="email" /><br />
 
-        <div id="app">
-            <button type="submit" v-on:click="greet">Enviar</button>
-        </div>
-        
-        <script>  
-            var example2 = new Vue({
-                el: '#app',
-                data: {
-                  name: 'Jovem'
-                },
-                // define métodos dentro do objeto `methods`
-                methods: {
-                  greet: function (event) {
-                    // `this` dentro de métodos aponta para a instância Vue
-                    alert('Olá ' + this.name + '!' + 'NewsLetter Cadastrada com sucesso!')
-                    // `event` é o evento DOM nativo
-                    if (event) {
-                      alert(event.target.tagName)
-                    }
-                  }
-                }
-              })
-              
-              // você pode invocar métodos no JavaScript também
-              example2.greet() // => 'Cadastrado com Sucesso, espere nossas noticias!'
-        </script>
+    <label for="prod"><h5 class="display-4">Produto</h5></label>
+    <select name="tipo-produto" id="tipoid">
+      <option value="1"><td>COVID-19</td></option>
+      <option value="2"><td>CIÊNCIA</td></option>
+      <option value="3"><td>TECNOLOGIA</td></option>
+    </select>
+    <br /><br />
 
-    
+    <div id="app">
+      <button type="submit" v-on:click="greet">Enviar</button>
+    </div>
+
+    <script>
+      var example2 = new Vue({
+        el: "#app",
+        data: {
+          name: "Jovem",
+        },
+        // define métodos dentro do objeto `methods`
+        methods: {
+          greet: function (event) {
+            // `this` dentro de métodos aponta para a instância Vue
+            alert(
+              "Olá " + this.name + "!" + "NewsLetter Cadastrada com sucesso!"
+            );
+            // `event` é o evento DOM nativo
+            if (event) {
+              alert(event.target.tagName);
+            }
+          },
+        },
+      });
+
+      // você pode invocar métodos no JavaScript também
+      example2.greet(); // => 'Cadastrado com Sucesso, espere nossas noticias!'
+    </script>
+
     <!-- Bootstrap - JavaSript - JQuery - Vue.js-->
-    
+
     <script src="js/index.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="js/jquery.js"></script>
-</body>
+  </body>
 </html>
