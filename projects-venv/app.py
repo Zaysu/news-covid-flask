@@ -27,9 +27,9 @@ def home():
     return render_template('index.html', news1=lista_noticia)
 
 
-@app.route("/news")
-def news():
-    return render_template('news.html', news1=lista_noticia)
+@app.route("/news/<id>")
+def news(id):
+    return render_template('news.html', news1=lista_noticia[int(id)])
 
 
 @app.route("/nl")
@@ -38,4 +38,4 @@ def nl():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

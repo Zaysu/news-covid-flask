@@ -76,7 +76,7 @@
               <h5 class="card-title">{{noticias.get_titulo()}} </h5>
               <img class="d-block w-100" src="../static/img/news/newscard1.jpg" alt="">
               <p class="card-text">{{noticias.get_corpo()}}</p>
-              <a href="news.html" class="btn btn-dark">Veja Mais</a>
+              <a href="{{url_for('news', id=noticias.get_id())}}" class="btn btn-dark">Veja Mais</a>
             </div>
             {% endfor %}
          
