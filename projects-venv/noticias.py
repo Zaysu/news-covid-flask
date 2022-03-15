@@ -1,10 +1,11 @@
 class Noticia:
     
-    def __init__(self, id, titulo, corpo, autor):
+    def __init__(self, id, titulo, corpo, autor, id_estado):
         self.__id = id
         self.__titulo = titulo
         self.__corpo = corpo
         self.__autor = autor
+        self.__id_estado = id_estado
         
     def get_id(self):
         return self.__id
@@ -17,3 +18,6 @@ class Noticia:
     
     def get_autor(self):
         return self.__autor
+    
+    def get_estado(self):
+        return self.__id_estado
