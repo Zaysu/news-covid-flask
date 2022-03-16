@@ -1,10 +1,11 @@
-function data(){
-    const now = new Date;
-    const time = now.getDate();
-    const time2 = now.getMonth();
-    const time3 = now.getFullYear();
-    document.getElementById('data').innerHTML = `
-    <p id="resultado-value">“Data Presente: ${time}/ ${time2}/ ${time3} ” </p>
-  `; 
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
 
-}
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible')
+});
+
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});

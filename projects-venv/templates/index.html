@@ -60,28 +60,23 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
-          <h3> Mais curtidas</h3>
-          
-          <div class="card text-center">
-            {% for noticias in news1 %}
-            <div class="card-header">
-              <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">COVID-19</a>
-                </li>
-              </ul>
+          <h1 class="display-3 float-center"> NEWS COVID:</h1>
+        {% for noticias in news1 %}          
+        <div class="courses-container">
+          <div class="course">
+            <div class="course-preview">
+              <h6>{{noticias.get_estado()}}</h6>
+              <h2>{{noticias.get_titulo()}}</h2>
+              <a href="#">Mais Noticias desse Estado <i class="fas fa-chevron-right"></i></a>
             </div>
-            
-            <div class="card-body">
-              <h5 class="card-title">{{noticias.get_titulo()}} </h5>
-              <img class="d-block w-100" src="../static/img/news/newscard1.jpg" alt="">
-              <p class="card-text">{{noticias.get_corpo()}}</p>
-              <a href="{{url_for('news', id=noticias.get_id())}}" class="btn btn-dark">Veja Mais</a>
+            <div class="course-info">
+              <h6>Autor: {{noticias.get_autor()}}</h6>
+              <h2>{{noticias.get_corpo()}}</h2>
+              <a class="btn" href="{{url_for('news', id=noticias.get_id())}}">Veja Mais!</a>
             </div>
-            {% endfor %}
-         
-
-
+          </div>
+        </div>
+        {% endfor %}
 
     <!-- Bootstrap - JavaSript - JQuery - Vue.js-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
