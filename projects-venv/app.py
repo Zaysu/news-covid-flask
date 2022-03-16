@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from noticias import Noticia
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
 lista_noticia = [Noticia(0, "noticia 1", "esse é o corpo da noticia 1", "Fulo de tal", 1),
                  Noticia(1, "noticia 2", "esse é o corpo da noticia 2",
@@ -24,17 +24,19 @@ lista_noticia = [Noticia(0, "noticia 1", "esse é o corpo da noticia 1", "Fulo d
 
 @app.route("/")
 def home():
-    return render_template('index.html', news1=lista_noticia)
+    return render_template("index.html", news1=lista_noticia)
 
 
-@app.route("/news/<id>")
+@app.route("/news/<int:id>")
 def news(id):
-    return render_template('news.html', news1=lista_noticia)
-
+        for noticia in lista_noticia: 
+                if noticia.get_id() == id:
+                        return render_template("news.html", noticia=noticia)
+    
 
 @app.route("/nl")
 def nl():
-    return render_template('newsletter.html', news1=lista_noticia)
+    return render_template("newsletter.html", news1=lista_noticia)
 
 
 if __name__ == "__main__":
