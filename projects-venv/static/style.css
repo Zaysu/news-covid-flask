@@ -87,6 +87,7 @@
         
         .course h6 {
           opacity: 0.6;
+          color:#b3404a;
           margin: 0;
           letter-spacing: 1px;
           text-transform: uppercase;
@@ -99,7 +100,7 @@
         
         .course-preview {
           background-color: #070707;
-          color: #fff;
+          color: rgba(250, 248, 248, 0.445);
           padding: 30px;
           max-width: 250px;
         }
