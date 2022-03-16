@@ -26,13 +26,15 @@ lista_noticia = [Noticia(0, "noticia 1", "esse é o corpo da noticia 1", "Fulo d
 def home():
     return render_template("index.html", news1=lista_noticia)
 
+@app.route("/maislidas")
+def mais_lidas():
+    return render_template("news-2.html")
 
 @app.route("/news/<int:id>")
 def news(id):
         for noticia in lista_noticia: 
                 if noticia.get_id() == id:
                         return render_template("news.html", noticia=noticia)
-    
 
 @app.route("/nl")
 def nl():
