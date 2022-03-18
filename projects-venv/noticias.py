@@ -1,12 +1,13 @@
 class Noticia:
     
-    def __init__(self, id, titulo, corpo, autor, corpo_corpo, id_estado):
+    def __init__(self, id, titulo, corpo, autor, corpo_corpo, id_estado, img):
         self.__id = id
         self.__titulo = titulo
         self.__corpo = corpo
         self.__autor = autor
         self.__news_corpo = corpo_corpo
         self.__id_estado = id_estado
+        self.__img = img
         
     def get_id(self):
         return self.__id
@@ -22,6 +23,7 @@ class Noticia:
     
     def get_corpo2(self):
         return self.__news_corpo    
+    
     def get_estado(self):
         if self.__id_estado == 1:
             self.__id_estado = "Acre"
@@ -72,3 +74,6 @@ class Noticia:
         if self.__id_estado == 24:
             self.__id_estado = "Tocantins"
         return self.__id_estado
+
+    def get_img(self):
+        return self.__img 
