@@ -8,19 +8,22 @@ lista_noticia = [
                  Noticia(1, "Alagoas registra mais 549 Casos de SarsCOV-2", "Aumento de casos chama atenção diante da média dos últimos cinco dias, quando o registro diário não passou de 100 confirmações",
                          "g1 AL", " Alagoas registrou 549 novos casos de Covid segundo o boletim epidemiológico da Secretaria de Estado da Saúde (Sesau), desta quarta-feira (16). Um aumento expressivo, levando-se em consideração os últimos cinco dias, quando o total de casos no estado não passou de 100 por dia:", 2, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
                  Noticia(2, "Amapá registra 4 novos casos", "Boletim epidemiológico desta quarta-feira (16) descreve 14 internados pela doença, sendo 6 na UTI.",
-                         "g1 AP", " O Amapá contabilizou 4 casos conhecidos e não registrou mortes por Covid-19 nas últimas 24 horas. Todos os pacientes novos eram de Macapá. Os dados constam no boletim epidemiológico do governo desta quarta-feira (16). Com isso, o estado registra 160.221 casos confirmados e 2.119 óbitos. Os recuperados somam 128.523 pessoas (80,21%). Especialistas acreditam que há muitos que não fazem o exame, que isto continua bastante necessário, assim como o isolamento. Esses fatores podem ocultar muitos casos confirmados de Covid-19 que deixam de entrar nas estatísticas oficiais.", 3, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
-                 Noticia(3, "noticia 4", "esse é o corpo da noticia 4",
-                         "Fulo de tal4", " Corpo extend da noticia", 4, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
-                 Noticia(4, "noticia 5", "esse é o corpo da noticia 5",
-                         "Fulo de tal5", " Corpo extend da noticia", 5, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
-                 Noticia(5, "noticia 6", "esse é o corpo da noticia 6",
-                         "Fulo de tal6", " Corpo extend da noticia", 6, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
-                 Noticia(6, "noticia 7", "esse é o corpo da noticia 7",
-                         "Fulo de tal7", " Corpo extend da noticia", 7, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
-                 Noticia(7, "noticia 8", "esse é o corpo da noticia 8",
-                         "Fulo de tal8", " Corpo extend da noticia", 8, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
+                         "g1 AP", " O Amapá contabilizou 4 casos conhecidos e não registrou mortes por Covid-19 nas últimas 24 horas. Todos os pacientes novos eram de Macapá. Os dados constam no boletim epidemiológico do governo desta quarta-feira (16). Com isso, o estado registra 160.221 casos confirmados e 2.119 óbitos. Os recuperados somam 128.523 pessoas (80,21%). Especialistas acreditam que há muitos que não fazem o exame, que isto continua bastante necessário, assim como o isolamento. Esses fatores podem ocultar muitos casos confirmados de Covid-19 que deixam de entrar nas estatísticas oficiais.", 
+                         3, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
+                 Noticia(3, "Rio de Janeiro atinge marca de mais de 30 milhões de doses", "Logística de distribuição ágil permitiu cobertura vacinal de 82 Porcento da população",
+                         "Governo Estado do RJ", " Corpo extend da noticiaO Estado do Rio de Janeiro atingiu, nesta sexta-feira (04/03), a marca de mais de 30 milhões de doses aplicadas contra a Covid-19 desde o início da campanha de imunização no estado, em janeiro de 2021. O dado equivale a 82% da população com 12 anos ou mais imunizada com a primeira e a segunda dose. - É mais um marco extremamente importante que alcançamos no combate à Covid-19. Estamos com os indicadores em queda sustentada e ampliando o processo de flexibilização das medidas de proteção. Isso ocorre no momento em que completamos dois anos do primeiro caso registrado no estado, em março de 2020. Ainda precisamos avançar na aplicação da dose de reforço e na imunização das crianças, mas estamos no caminho certo para que possamos chegar ao fim da pandemia – afirmou o secretário de Estado de Saúde, Alexandre Chieppe.", 
+                         16, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
+                 Noticia(4, " SP anuncia aplicação da 4ª dose para maiores de 60 anos ", 
+                         "A quarta dose poderá ser tomada apenas por quem já se imunizou há mais de quatro meses com a terceira dose, segundo a coordenador do Programa Estadual de Imunização (PEI), Regiane de Paula. Cerca de 4,5 milhões de pessoas poderão receber o reforço na nova data.",
+                         "g1 SP — São Paulo", 
+                         " O governo de São Paulo anunciou neste domingo (27) a aplicação da quarta dose da vacina contra a Covid-19 para pessoas acima de 60 anos a partir do dia 5 de abril. Em coletiva de imprensa durante a realização do chamado “domingão da vacinação”, o governador João Doria (PSDB) afirmou que cerca de 4,5 milhões de pessoas já poderão tomar essa segunda dose de reforço a partir dessa nova data. Segundo a coordenador do Programa Estadual de Imunização (PEI), Regiane de Paula, a quarta dose poderá ser tomada apenas para quem já se imunizou há mais de quatro meses com a terceira dose.", 
+                         22, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
+                 Noticia(5, "Minas Gerais registra mais duas mortes de crianças por Covid-19", 
+                         "Vacinação garante a proteção de crianças contra o novo coronavírus",
+                         "Raíssa Oliveira ", 
+                         " Muitos pais ainda não levaram os filhos para vacinar Minas Gerais registrou mais duas mortes de crianças, de até 2 anos, por complicações da Covid-19. Os dados foram divulgados pela Secretaria de Estado de Saúde (SES) no boletim epidemiológico desta segunda-feira (28).  Conforme a pasta, os óbitos são de um bebê menor de 1 ano e um paciente de 1 a 9. Na última sexta-feira (25), o número de vítimas destas faixas etárias era 48 e 55, respectivamente. No entanto, o boletim não informa a data exata da morte dos pacientes, assim como não há a cidade onde os casos foram registrados.  Desde o início da pandemia, em março de 2020, 56 bebês e 49 crianças de até 9 anos também morreram após serem contaminados pelo coronavírus. Além delas, 78 jovens foram vítimas da doença, totalizando 183 óbitos infantis no Estado.", 
+                         12, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
                  ]
-
 
 @app.route("/")
 def home():
@@ -35,7 +38,8 @@ def news(id):
         for noticia in lista_noticia: 
                 if noticia.get_id() == id:
                         return render_template("news.html", noticia=noticia)
-
+                else: 
+                        return render_template("404.html")
 @app.route("/nl")
 def nl():
     return render_template("newsletter.html", news1=lista_noticia)
