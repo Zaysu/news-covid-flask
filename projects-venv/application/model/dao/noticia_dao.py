@@ -1,8 +1,7 @@
 from application.model.entity.noticias import Noticia
 
-class NoticiaDAO:
-
-    lista_noticia = [
+     
+lista_noticia = [
                  Noticia(0, "Por orientação do Comitê Covid", "Por orientação do Comitê Covid, governo volta a obrigar máscara em locais fechados no Acre", "Iryá Rodrigues, g1 AC", "Após anunciar o fim da obrigatoriedade do uso de máscara no Acre em locais abertos ou fechados, o governador Gladson Cameli voltou atrás e decidiu manter a medida preventiva contra a Covid-19. O novo decreto foi publicado na edição desta quarta-feira (16) do Diário Oficial do Estado (DOE). No dia 8 de março, o governo havia informado que, com o fim do último decreto que estabelecia o dia 15 de janeiro deste ano como data limite da recomendação, o uso de máscara não era mais obrigatório no estado. Apesar disso, recomendou o uso da proteção em locais fechados e com aglomeração." , 1, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
                  Noticia(1, "Alagoas registra mais 549 Casos de SarsCOV-2", "Aumento de casos chama atenção diante da média dos últimos cinco dias, quando o registro diário não passou de 100 confirmações",
                          "g1 AL", " Alagoas registrou 549 novos casos de Covid segundo o boletim epidemiológico da Secretaria de Estado da Saúde (Sesau), desta quarta-feira (16). Um aumento expressivo, levando-se em consideração os últimos cinco dias, quando o total de casos no estado não passou de 100 por dia:", 2, "https://ichef.bbci.co.uk/news/1024/branded_portuguese/34FA/production/_111226531_corona.jpg"),
