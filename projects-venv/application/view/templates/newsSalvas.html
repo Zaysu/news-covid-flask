@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    {% for comentario in lista_comentarios %}
+        <h1 class="display-4"> {{ comentario.getNomeC() }}       </h1>
+        <h1 class="display-4"> {{ comentario.getEmail() }}       </h1>
+        <h1 class="display-4" > {{ comentario.getComentario() }}  </h1>
+    {% endfor %}
+    <h2>------------------Comentario Registrado------------------</h2>
+</div>
+{% endblock %}

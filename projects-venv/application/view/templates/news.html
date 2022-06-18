@@ -8,8 +8,53 @@
         <h3 class="display-5"> {{noticia.get_corpo()}}  </h3><br><br>
         <img src="{{noticia.get_img()}}" class="img-fluid" alt="Responsive image">
         <h4 class="display-4"> {{noticia.get_corpo2()}}<h4>
-      </div>
-      
+      </div>  
     </div>
 
+
+    <div class="container">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button class="like btn btn-secondary">Curtir</button>
+        <span class="likes btn btn-danger "><span>0</span> curtidas</span>
+      </div>
+      {% for comentario in lista_comentarios %}
+        <div class="alert alert-dark">
+          <Strong class="alert alert-info"> Autor: </Strong><br><br><h4 class="h3 display-4"> {{ comentario.getNomeC() }}       </h4><br>
+          <Strong class="alert alert-info"> Email: </Strong><br><br><h4 class="h4 display-4"> {{ comentario.getEmail() }}       </h4><br>
+          <Strong class="alert alert-info"> Comentario: </Strong><br><br><h4 class="display-4" > {{ comentario.getComentario() }}  </h4><br>
+        </div>
+      {% endfor %}
+  </div>
+
+    <div class="container">
+    <h2 class="display-2 alert alert-info"> Adcione um comentario </h2> 
+    <form action="{{ url_for('salvar')}}" onSubmit="return ( verifica() )" method="POST">
+      <div class="form-group">
+        <input class="form-control form-control-sm" type="text" id="input-nome" name="nome" placeholder="Digite seu Nome">
+        <input type="email" class="form-control" id="input-nome" name="email" placeholder="name@example.com" onblur="checarEmail();" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1"><h4 class="display-4">Texto</h4></label>
+        <textarea class="form-control" id="input-nome" name="comentario" rows="3"></textarea> 
+      </div> 
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <input type="submit" class="btn btn-secondary" />
+      </div>
+    </form>  
+    </div>
+    <script>
+      $(function() {
+        $('.like').on('click', function() {
+            $(this).next('.likes').find('span').text(function() {
+                if (parseInt($(this).text()) === 0) {
+                    return parseInt($(this).text() + 1);
+                }
+                else {
+                    return 0;
+                }
+            });
+        });
+    });
+    </script>
 {% endblock %}
